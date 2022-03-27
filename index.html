@@ -16,30 +16,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="weatherApp">
-        <h1>Vancouver, CA</h1>
-        <ul>
-          <li class="currentDate">Sunday 09:30</li>
-          <li class="currentWeatherCondition">Rainy</li>
-        </ul>
-
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="images/rainy.png"
-              alt="rainy"
-              width="58px"
-              height="58px"
-            />
-            10°C | °F
-          </div>
-          <div class="col-6">
+      <div class="weatherApp-wrapper">
+        <div class="weatherApp">
+          <div class="location-overview">
+            <h1>Vancouver, CA</h1>
             <ul>
-              <li>Feels like: 7°C</li>
-              <li>Precipitation: 80%</li>
-              <li>Humidity: 77%</li>
-              <li>Wind: 8km/h</li>
+              <li class="currentDate">Sunday 09:30</li>
+              <li class="currentWeatherCondition">Rainy</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="images/rainy.png" alt="rainy" class="float-left" />
+                <div class="float-left">
+                  <span class="temperature"> 10</span
+                  ><span class="units">°C | °F</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Feels like: 7°C</li>
+                <li>Precipitation: 80%</li>
+                <li>Humidity: 77%</li>
+                <li>Wind: 8km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
