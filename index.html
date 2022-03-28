@@ -19,10 +19,10 @@
       <div class="weatherApp-wrapper">
         <div class="weatherApp">
           <div class="location-overview">
-            <h1>Vancouver, CA</h1>
+            <h1 id="city">Vancouver, <span id="country">CA</span></h1>
             <ul>
-              <li class="currentDate">Sunday 09:30</li>
-              <li class="currentWeatherCondition">Rainy</li>
+              <li id="currentDate">Sunday 09:30</li>
+              <li id="currentWeatherCondition">Rainy</li>
             </ul>
           </div>
           <div class="row">
@@ -30,17 +30,16 @@
               <div class="clearfix weather-temperature">
                 <img src="images/rainy.png" alt="rainy" class="float-left" />
                 <div class="float-left">
-                  <span class="temperature"> 10</span
+                  <span class="temp" id="temperature"> 10</span
                   ><span class="units">°C | °F</span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Feels like: 7°C</li>
-                <li>Precipitation: 80%</li>
-                <li>Humidity: 77%</li>
-                <li>Wind: 8km/h</li>
+                <li>Feels like: <span id="feelTemperature"></span>°C</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
@@ -55,6 +54,6 @@
         </small>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
