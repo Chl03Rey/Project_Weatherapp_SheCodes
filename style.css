@@ -19,9 +19,12 @@ ul {
   margin-bottom: 10px;
 }
 
+li.first-letter {
+  text-transform: capitalize;
+}
+
 li {
   list-style: none;
-  text-transform: capitalize;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -62,4 +65,8 @@ li {
   font-size: 16px;
   top: -32px;
   color: rgb(135, 135, 135);
+}
+
+.currentWeatherCondition {
+  text-transform: capitalize;
 }
