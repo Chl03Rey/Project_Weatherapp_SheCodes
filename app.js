@@ -29,6 +29,8 @@ function displayTemperature(response) {
   let feelsLikeElement = document.querySelector("#feelTemperature");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#currentDate");
+  let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   conditionElement.innerHTML = response.data.weather[0].description;
@@ -36,10 +38,15 @@ function displayTemperature(response) {
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "627863a58e36a8002df35a69076af8ab";
-let city = "Portland";
+let city = "Seattle";
 let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayTemperature);

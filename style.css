@@ -67,6 +67,6 @@ li {
   color: rgb(135, 135, 135);
 }
 
-.currentWeatherCondition {
+#currentWeatherCondition {
   text-transform: capitalize;
 }
